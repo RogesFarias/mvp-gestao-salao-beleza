@@ -10,3 +10,6 @@ __pycache__/
 .env
 *.db
 *.sqlite3
+
+# Banco de dados local
+instance/
