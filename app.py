@@ -21,8 +21,18 @@ def inicio():
     return "<h1>Sistema de Gestão - Salão de Beleza</h1>"
 
 
+
 @app.route("/agendamentos")
 def listar_agendamentos():
+    agendamentos = Agendamento.query.order_by(
+        Agendamento.data_hora
+    ).all()
+
+    return render_template(
+        "lista_agendamentos.html",
+        agendamentos=agendamentos
+    )
+
     agendamentos = Agendamento.query.order_by(
         Agendamento.data_hora
     ).all()
