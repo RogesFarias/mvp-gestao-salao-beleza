@@ -13,3 +13,4 @@ __pycache__/
 
 # Banco de dados local
 instance/
+.coverage
