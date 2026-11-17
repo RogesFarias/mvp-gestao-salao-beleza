@@ -2,12 +2,40 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Agendamentos do Salão</title>
 </head>
 <body>
     <h1>Agendamentos do Salão</h1>
+
+
+<div>
+    <button type="button" onclick="alterarFonte(2)">
+        A+ Aumentar letras
+    </button>
+
+    <button type="button" onclick="alterarFonte(-2)">
+        A- Diminuir letras
+    </button>
+</div>
+
+<script>
+    let tamanhoFonte = 16;
+
+    function alterarFonte(valor) {
+        tamanhoFonte = Math.max(
+            12,
+            Math.min(28, tamanhoFonte + valor)
+        );
+
+        document.body.style.fontSize = tamanhoFonte + "px";
+    }
+</script>
+
 
     {% if agendamentos %}
         {% for agendamento in agendamentos %}

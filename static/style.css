@@ -1,0 +1,108 @@
+
+/* Visual do MVP - Gestão de Salão de Beleza */
+
+:root {
+    --rosa: #a83268;
+    --rosa-claro: #fce8f1;
+    --fundo: #fff8fb;
+    --texto: #342631;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--fundo);
+    color: var(--texto);
+    margin: 0;
+    padding: 30px;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    color: var(--rosa);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+form, table {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+form {
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+input, select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    margin-top: 6px;
+    border: 1px solid #c9b6c0;
+    border-radius: 8px;
+    font: inherit;
+}
+
+button, .botao {
+    background-color: var(--rosa);
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font: inherit;
+    margin: 5px;
+}
+
+button:hover, .botao:hover {
+    background-color: #80254e;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+a:focus-visible {
+    outline: 3px solid #663399;
+    outline-offset: 3px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background-color: var(--rosa-claro);
+    color: #702347;
+}
+
+a {
+    color: #86264e;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+
+    form, table {
+        padding: 12px;
+    }
+}

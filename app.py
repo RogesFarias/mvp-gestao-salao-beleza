@@ -127,22 +127,32 @@ def novo_cliente():
 
         return "Cliente cadastrado com sucesso!"
 
+  
     return """
-    <h1>Cadastrar Cliente</h1>
-    <form method="POST">
-        <label for="nome">Nome:</label>
-        <input id="nome" name="nome" required>
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Cadastro de Clientes</title>
+        <link rel="stylesheet" href="/static/style.css">
+    </head>
+    <body>
+        <h1>💗 Cadastrar Cliente</h1>
 
-        <br><br>
+        <form method="POST">
+            <label for="nome">Nome:</label>
+            <input id="nome" name="nome" required>
 
-        <label for="telefone">Telefone:</label>
-        <input id="telefone" name="telefone" required>
+            <label for="telefone">Telefone:</label>
+            <input id="telefone" name="telefone" required>
 
-        <br><br>
-
-        <button type="submit">Salvar Cliente</button>
-    </form>
+            <button type="submit">Salvar Cliente</button>
+        </form>
+    </body>
+    </html>
     """
+
 
 
 @app.route("/servicos/novo", methods=["GET", "POST"])
@@ -170,30 +180,37 @@ def novo_servico():
 
         return "Serviço cadastrado com sucesso!"
 
+    
     return """
-    <h1>Cadastrar Serviço</h1>
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Cadastro de Serviços</title>
+        <link rel="stylesheet" href="/static/style.css">
+    </head>
+    <body>
+        <h1>💗 Cadastrar Serviço</h1>
 
-    <form method="POST">
-        <label for="nome">Nome do serviço:</label>
-        <input id="nome" name="nome" required>
+        <form method="POST">
+            <label for="nome">Nome do serviço:</label>
+            <input id="nome" name="nome" required>
 
-        <br><br>
+            <label for="preco">Preço (R$):</label>
+            <input type="number" id="preco" name="preco"
+                   min="0" step="0.01" required>
 
-        <label for="preco">Preço (R$):</label>
-        <input type="number" id="preco" name="preco"
-               min="0" step="0.01" required>
+            <label for="duracao">Duração (minutos):</label>
+            <input type="number" id="duracao" name="duracao"
+                   min="1" required>
 
-        <br><br>
-
-        <label for="duracao">Duração (minutos):</label>
-        <input type="number" id="duracao" name="duracao"
-               min="1" required>
-
-        <br><br>
-
-        <button type="submit">Salvar Serviço</button>
-    </form>
+            <button type="submit">Salvar Serviço</button>
+        </form>
+    </body>
+    </html>
     """
+
 
 
 if __name__ == "__main__":
